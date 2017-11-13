@@ -57,6 +57,11 @@ namespace test
                     }
                 };
             });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("Administrator", policy => policy.RequireClaim("user_roles", "[Administrator]"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

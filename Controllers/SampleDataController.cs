@@ -28,6 +28,13 @@ namespace test.Controllers
             });
         }
 
+        [HttpGet("authorization")]
+        [Authorize(Roles = "Administrators")]
+        public string TestAuthorization()
+        {
+            return "Authorization is working!";
+        }
+
         public class WeatherForecast
         {
             public string DateFormatted { get; set; }
