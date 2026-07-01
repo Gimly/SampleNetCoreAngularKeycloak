@@ -53,7 +53,7 @@ namespace test
                             return c.Response.WriteAsync(c.Exception.ToString());
                         }
 
-                        return c.Response.WriteAsync("An error occured processing your authentication.");
+                        return c.Response.WriteAsync("An error occurred processing your authentication.");
                     }
                 };
             });
